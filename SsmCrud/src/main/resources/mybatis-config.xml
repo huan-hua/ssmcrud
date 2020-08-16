@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--全局参数-->
+    <settings>
+        <setting name="multipleResultSetsEnabled" value="true"/>
+    </settings>
+    <!--别名-->
+    <typeAliases>
+        <package name="com.zjh.entity"/>
+    </typeAliases>
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+                <!--分页参数合理化-->
+            <property name="reasonable" value="true"/>
+        </plugin>
+    </plugins>
+</configuration>
